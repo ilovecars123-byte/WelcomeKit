@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title data-lang-key="pageTitle">Gerador CRUD de JSON</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./src/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Header com Título e Seletor de Idioma -->
+    <div class="header-container">
+      <h1 data-lang-key="mainTitle">Gerador CRUD de JSON</h1>
+      <button id="lang-switcher-btn">Switch to English</button>
+    </div>
+
+    <div class="main-form">
+      <h2 data-lang-key="newSectionTitle">➕ Nova Seção</h2>
+      <label data-lang-key="osLabel"> Sistema Operacional: </label>
+      <select id="os-select">
+        <option value="windows">Windows</option>
+        <option value="linux">Linux</option>
+      </select>
+      <label data-lang-key="sectionTitleLabel"> Título da Seção: </label>
+      <input
+        type="text"
+        id="section-title-input"
+        data-lang-key-placeholder="sectionTitlePlaceholder"
+        placeholder="Ex: 📞 Essentials"
+      />
+      <button onclick="addSection()" data-lang-key="addSectionBtn">
+        Adicionar Seção
+      </button>
+    </div>
+
+    <div class="preview-grid" id="preview-container">
+      <div class="os-column" id="windows-column">
+        <h2>🪟 Windows</h2>
+        <div id="windows-sections"></div>
+      </div>
+      <div class="os-column" id="linux-column">
+        <h2>🐧 Linux</h2>
+        <div id="linux-sections"></div>
+      </div>
+    </div>
+
+    <div class="output-section">
+      <h2 data-lang-key="outputTitle">📄 Saída JSON / Ações</h2>
+      <div class="output" id="json-output"></div>
+      <div class="final-actions">
+        <button onclick="exportJSON()" data-lang-key="exportJsonBtn">
+          Exportar JSON
+        </button>
+        <label
+          id="import-json-label"
+          for="import-json-input"
+          data-lang-key="importJsonBtn"
+          >Importar JSON</label
+        >
+        <input
+          type="file"
+          id="import-json-input"
+          accept=".json"
+          onchange="importJSON(event)"
+        />
+      </div>
+    </div>
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>
