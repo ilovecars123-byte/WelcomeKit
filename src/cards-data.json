@@ -1,0 +1,111 @@
+{
+  "windows": [
+    {
+      "title": "🚀 Primeiros Passos",
+      "links": [
+        {
+          "name": "App de Mensagens da Equipe",
+          "url": "https://example.com/downloads/team-chat.exe",
+          "type": "download"
+        },
+        {
+          "name": "Cliente de E-mail",
+          "url": "https://example.com/email-client-download-page",
+          "type": "external"
+        },
+        {
+          "name": "Serviço de Nuvem",
+          "url": "https://example.com/downloads/cloud-storage.msi",
+          "type": "download"
+        },
+        {
+          "name": "Cliente VPN Corporativo",
+          "url": "https://example.com/downloads/vpn-installer.exe",
+          "type": "download"
+        }
+      ]
+    },
+    {
+      "title": "🌐 Links Úteis",
+      "links": [
+        {
+          "name": "Portal de Suporte (Help Desk)",
+          "url": "https://suporte.suaempresa.com",
+          "type": "external"
+        },
+        {
+          "name": "Documentação Interna",
+          "url": "https://docs.suaempresa.com",
+          "type": "external"
+        },
+        {
+          "name": "Acesso ao Webmail",
+          "url": "https://webmail.suaempresa.com",
+          "type": "external"
+        }
+      ]
+    },
+    {
+      "title": "🛠️ Ferramentas de Desenvolvimento",
+      "links": [
+        {
+          "name": "Editor de Código (VS Code)",
+          "url": "https://code.visualstudio.com/download",
+          "type": "external"
+        },
+        {
+          "name": "Cliente Git (Git for Windows)",
+          "url": "https://git-scm.com/download/win",
+          "type": "external"
+        },
+        {
+          "name": "Cliente SSH (Putty)",
+          "url": "https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html",
+          "type": "external"
+        }
+      ]
+    }
+  ],
+  "linux": [
+    {
+      "title": "🚀 Primeiros Passos",
+      "links": [
+        {
+          "name": "App de Mensagens (Flatpak)",
+          "url": "https://flathub.org/apps/details/com.example.TeamChat",
+          "type": "external"
+        },
+        {
+          "name": "Serviço de Nuvem (Instruções)",
+          "url": "https://example.com/cloud-storage/linux-instructions",
+          "type": "external"
+        },
+        {
+          "name": "Cliente VPN (OpenVPN)",
+          "url": "https://openvpn.net/vpn-client-for-linux/",
+          "type": "external"
+        }
+      ]
+    },
+    {
+      "title": "🛠️ Ferramentas de Desenvolvimento",
+      "links": [
+        {
+          "name": "Editor de Código (VS Code)",
+          "url": "https://code.visualstudio.com/docs/setup/linux",
+          "type": "external"
+        },
+        {
+          "name": "Docker",
+          "url": "https://docs.docker.com/engine/install/",
+          "type": "external"
+        },
+        {
+          "name": "Testador de API (Postman)",
+          "url": "https://www.postman.com/downloads/",
+          "type": "external"
+        }
+      ]
+    }
+  ]
+}

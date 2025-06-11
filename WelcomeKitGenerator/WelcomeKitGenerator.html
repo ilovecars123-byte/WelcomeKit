@@ -2,51 +2,67 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <title data-lang-key="pageTitle">Gerador CRUD de JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-lang-key="pageTitle">Gerador de Welcome Kit</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link href="./src/styles.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- Header com Título e Seletor de Idioma -->
-    <div class="header-container">
-      <h1 data-lang-key="mainTitle">Gerador CRUD de JSON</h1>
+    <header class="header-container">
+      <h1 data-lang-key="mainTitle">Gerador de Welcome Kit</h1>
       <button id="lang-switcher-btn">Switch to English</button>
-    </div>
+    </header>
 
-    <div class="main-form">
-      <h2 data-lang-key="newSectionTitle">➕ Nova Seção</h2>
-      <label data-lang-key="osLabel"> Sistema Operacional: </label>
-      <select id="os-select">
-        <option value="windows">Windows</option>
-        <option value="linux">Linux</option>
-      </select>
-      <label data-lang-key="sectionTitleLabel"> Título da Seção: </label>
-      <input
-        type="text"
-        id="section-title-input"
-        data-lang-key-placeholder="sectionTitlePlaceholder"
-        placeholder="Ex: 📞 Essentials"
-      />
-      <button onclick="addSection()" data-lang-key="addSectionBtn">
-        Adicionar Seção
-      </button>
-    </div>
-
-    <div class="preview-grid" id="preview-container">
-      <div class="os-column" id="windows-column">
-        <h2>🪟 Windows</h2>
-        <div id="windows-sections"></div>
+    <main>
+      <div class="main-form">
+        <h2 data-lang-key="newSectionTitle">➕ Nova Seção</h2>
+        <div class="form-grid">
+          <div>
+            <label for="os-select" data-lang-key="osLabel"
+              >Sistema Operacional:</label
+            >
+            <select id="os-select">
+              <option value="windows">Windows</option>
+              <option value="linux">Linux</option>
+            </select>
+          </div>
+          <div>
+            <label for="section-title-input" data-lang-key="sectionTitleLabel"
+              >Título da Seção:</label
+            >
+            <input
+              type="text"
+              id="section-title-input"
+              data-lang-key-placeholder="sectionTitlePlaceholder"
+              placeholder="Ex: 📞 Essentials"
+            />
+          </div>
+        </div>
+        <button
+          onclick="addSection()"
+          data-lang-key="addSectionBtn"
+          class="btn-primary"
+        >
+          Adicionar Seção
+        </button>
       </div>
-      <div class="os-column" id="linux-column">
-        <h2>🐧 Linux</h2>
-        <div id="linux-sections"></div>
-      </div>
-    </div>
 
-    <div class="output-section">
+      <div class="preview-grid" id="preview-container">
+        <div class="os-column" id="windows-column">
+          <h2 class="column-title">🪟 Windows</h2>
+          <div id="windows-sections"></div>
+        </div>
+        <div class="os-column" id="linux-column">
+          <h2 class="column-title">🐧 Linux</h2>
+          <div id="linux-sections"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="output-section">
       <h2 data-lang-key="outputTitle">📄 Saída JSON / Ações</h2>
       <div class="output" id="json-output"></div>
       <div class="final-actions">
@@ -66,7 +82,7 @@
           onchange="importJSON(event)"
         />
       </div>
-    </div>
+    </footer>
 
     <script src="./src/script.js"></script>
   </body>
